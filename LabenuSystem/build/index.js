@@ -1,10 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const User_1 = require("./User");
-const Customer_1 = require("./Customer");
-const Client_1 = require("./Client");
-const user = new User_1.User("10", "teste@gmail.com", "teste", "xxxxxx");
-const customer = new Customer_1.Customer("20", "teste2@gmail.com", "teste2", "xxxxxx", "414-555");
-const customer1 = new Customer_1.Customer("30", "teste3@gmail.com", "teste3", "xxxxxx", "414-555");
-console.log(Client_1.client.calculateBill());
+const app_1 = require("./app");
+const Turma_1 = __importDefault(require("./endpoints/Turma"));
+const turma = new Turma_1.default();
+app_1.app.post("/criar-turma", turma.criar);
 //# sourceMappingURL=index.js.map
